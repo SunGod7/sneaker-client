@@ -18,19 +18,19 @@ import CreateSneaker from './components/sneakers/CreateSneaker'
 
 const App = () => {
 
-  const [user, setUser] = useState(null)
-  const [msgAlerts, setMsgAlerts] = useState([])
+	const [user, setUser] = useState(null)
+	const [msgAlerts, setMsgAlerts] = useState([])
 
-  console.log('user in app', user)
-  console.log('message alerts', msgAlerts)
-  const clearUser = () => {
-    console.log('clear user ran')
-    setUser(null)
-  }
+	console.log('user in app', user)
+	console.log('message alerts', msgAlerts)
+	const clearUser = () => {
+		console.log('clear user ran')
+		setUser(null)
+	}
 
 	const deleteAlert = (id) => {
 		setMsgAlerts((prevState) => {
-			return (prevState.filter((msg) => msg.id !== id) )
+			return (prevState.filter((msg) => msg.id !== id))
 		})
 	}
 
@@ -39,7 +39,7 @@ const App = () => {
 		setMsgAlerts(() => {
 			return (
 				[{ heading, message, variant, id }]
-      )
+			)
 		})
 	}
 
@@ -59,28 +59,28 @@ const App = () => {
 				<Route
 					path='/sign-out'
 					element={
-					<RequireAuth user={user}>
-						<SignOut msgAlert={msgAlert} clearUser={clearUser} user={user} />
-					</RequireAuth>
+						<RequireAuth user={user}>
+							<SignOut msgAlert={msgAlert} clearUser={clearUser} user={user} />
+						</RequireAuth>
 					}
 				/>
 				<Route
 					path='/change-password'
 					element={
-					<RequireAuth user={user}>
-						<ChangePassword msgAlert={msgAlert} user={user} />
-					</RequireAuth>}
+						<RequireAuth user={user}>
+							<ChangePassword msgAlert={msgAlert} user={user} />
+						</RequireAuth>}
 				/>
 				<Route
 					path="/sneakers/:id"
-					element={ <ShowSneaker msgAlert={ msgAlert } />}
+					element={<ShowSneaker  user={user} msgAlert={msgAlert}  />}
 				/>
 				<Route
 					path="/addSneaker"
 					element={
-						<RequireAuth user={ user }>
-							<CreateSneaker />
-						</RequireAuth>  
+						<RequireAuth user={user}>
+							<CreateSneaker msgAlert={msgAlert} user={user} />
+						</RequireAuth>
 					}
 				/>
 			</Routes>
