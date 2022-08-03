@@ -12,8 +12,8 @@ const ShowShirt = (props) => {
 
     // this will set a color depending on the shirt's condition
     const setBgCondition = (cond) => {
-        if (cond === 'new') {
-            return ({ width: '18rem', backgroundColor: '#b5ead7' })
+        if (cond === 'Hoodie') {
+            return ({ width: '18rem', backgroundColor: '#a557t4' })
         } else if (cond === 'used') {
             return ({ width: '18rem', backgroundColor: '#ffdac1' })
         } else {
@@ -44,7 +44,7 @@ const ShowShirt = (props) => {
             <Card className="m-2" style={setBgCondition(shirt.description)}>
                 <Card.Header>{shirt.color}</Card.Header>
                 <Card.Body>
-                    <small>{shirt.price}</small><br />
+                    <small>${shirt.price}</small><br />
                     <small>
                         {shirt.graphic ? 'Designer' : 'plain'}
                     </small>
@@ -52,7 +52,7 @@ const ShowShirt = (props) => {
                 <Card.Footer>
                     <small>Description: {shirt.description}</small><br />
                     {
-                        user && user._id === sneaker.owner._id
+                        user && user._id === sneaker.owner
                             ?
                             <>
                                 <Button

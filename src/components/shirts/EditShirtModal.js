@@ -44,8 +44,8 @@ const EditShirtModal = (props) => {
             // send a success message to the user
             .then(() => {
                 msgAlert({
-                    heading: 'Oh Yeah!',
-                    message: 'Great! The shirt is better than ever!',
+                    heading: 'Great shirt!!',
+                    message: ' Have a nice day!',
                     variant: 'success'
                 })
             })
@@ -53,8 +53,8 @@ const EditShirtModal = (props) => {
             // if there is an error, tell the user about it
             .catch(() =>
                 msgAlert({
-                    heading: 'Oh No!',
-                    message: 'Something went wrong, please try again',
+                    heading: 'ERROR!',
+                    message: 'not able to process, please try again',
                     variant: 'danger'
                 })
             )

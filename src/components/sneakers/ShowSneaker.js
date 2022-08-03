@@ -118,7 +118,7 @@ const ShowSneaker = (props) => {
                             Give {sneaker.name} a shirt!
                         </Button>
                         {
-                            sneaker.owner && user && sneaker.owner._id === user._id
+                            sneaker.owner && user && sneaker.owner === user._id
                                 ?
                                 <>
                                     <Button onClick={() => setEditModalShow(true)}
@@ -131,7 +131,7 @@ const ShowSneaker = (props) => {
                                         className="m-2"
                                         variant="danger"
                                     >
-                                        Set {sneaker.name} Free
+                                        DELETE {sneaker.name} 
                                     </Button>
                                 </>
                                 :

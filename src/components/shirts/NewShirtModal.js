@@ -47,8 +47,8 @@ const NewShirtModal = (props) => {
             // send a success message to the user
             .then(() => {
                 msgAlert({
-                    heading: 'Oh Yeah!',
-                    message: 'Great! The sneaker loves it!',
+                    heading: 'Great shirt!!',
+                    message: ' Have a nice day!',
                     variant: 'success'
                 })
             })
@@ -56,8 +56,8 @@ const NewShirtModal = (props) => {
             // if there is an error, tell the user about it
             .catch(() =>
                 msgAlert({
-                    heading: 'Oh No!',
-                    message: 'Something went wrong, please try again',
+                    heading: 'ERROR!',
+                    message: 'not able to process, please try again',
                     variant: 'danger'
                 })
             )
@@ -71,7 +71,7 @@ const NewShirtModal = (props) => {
                     shirt={shirt}
                     handleChange={handleChange}
                     handleSubmit={handleSubmit}
-                    heading="Give the sneaker a shirt!"
+                    heading="Get matching shirt!"
                 />
             </Modal.Body>
         </Modal>

@@ -3,6 +3,7 @@ import {
     Button,
     Container
 } from 'react-bootstrap'
+import { getOverlayDirection } from 'react-bootstrap/esm/helpers'
 
 const SneakerForm = (props) => {
     const { sneaker, handleChange, heading, handleSubmit } = props

@@ -49,10 +49,10 @@ const alwaysOptions = (
 )
 
 const Header = ({ user }) => (
-	<Navbar bg='primary' variant='dark' expand='md'>
+	<Navbar bg='success' variant='dark' expand='md'>
 		<Navbar.Brand className='m-2'>
 			<Link to='/' style={linkStyle}>
-				Sneaker
+				Sneakers
 			</Link>
 		</Navbar.Brand>
 		<Navbar.Toggle aria-controls='basic-navbar-nav' />

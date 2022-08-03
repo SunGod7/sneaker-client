@@ -18,7 +18,7 @@ const ShirtForm = (props) => {
                 />
                 <Form.Label htmlFor="price">Price</Form.Label>
                 <Form.Control
-                    placeholder="What kind of shirt is this?"
+                    placeholder="how much ?"
                     type="number"
                     name="price"
                     id="price"
@@ -27,7 +27,7 @@ const ShirtForm = (props) => {
                 />
                 <Form.Check
                     label="Is it graphic?"
-                    name="graphic"
+                    name="Graphic"
                     defaultChecked={ shirt.graphic  }
                     onChange={ handleChange }
                 />

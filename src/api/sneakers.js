@@ -13,13 +13,7 @@ export const getOneSneaker = (id) => {
 
 // CREATE
 export const createSneaker = (user, newSneaker) => {
-    // console.log('createSneaker in api was hit')
-    // in our createsneaker form, we're building an object
-    // when we pass that object into the api createSneaker function,
-    // it's going to look like the sneakers in our database
-    // we're going to refer to this as newPSneaker
-    // console.log('this is user', user)
-    // console.log('this is newSneaker', newSneaker)
+   
     return axios({
         url: apiUrl + '/sneakers',
         method: 'POST',
@@ -32,12 +26,7 @@ export const createSneaker = (user, newSneaker) => {
 
 // UPDATE
 export const updateSneaker = (user, updatedSneaker) => {
-    // console.log('createSneaker in api was hit')
-    // in our createsneaker form, we're building an object
-    // when we pass that object into the api createSneaker function,
-    // it's going to look like the sneakers in our database
-    // we're going to refer to this as newSneaker
-    // console.log('this is user', user)
+    
     console.log('this is updatedSneaker', updatedSneaker)
     return axios({
         url: `${apiUrl}/sneakers/${updatedSneaker.id}`,
